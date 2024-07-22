@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #0e1117;
+      color: white;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      /* border: 1px solid black; */
+      text-align: center;
+      padding: 10px;
+    }
+
+    .hero {
+      margin-bottom: 20px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .container > p:nth-child(2) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <p class="hero">Hello, Welcome to Aury 👋</p>
+
+      <p>You can upload your file here</p>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+      {{form.hidden_tag()}} {{form.file()}} {{form.submit()}}
+    </form>
+  </body>
+</html>
